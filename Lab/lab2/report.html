@@ -1,0 +1,827 @@
+<!DOCTYPE html><html><head>
+      <title>report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\86153\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="ai_lab_02">AI_Lab_02 </h1>
+<h2 id="pb21111686_赵卓">PB21111686_赵卓 </h2>
+<h3 id="part_1">Part_1 </h3>
+<h4 id="decisiontree">DecisionTree </h4>
+<ul>
+<li>
+<p>实验背景：全球肥胖患病率在稳步上升，肥胖会导致身体和精神问题，是一个后果严重的全球性健康问题。现在我们有一份数据集，记录了来自秘鲁、墨西哥、哥伦比亚等国个人肥胖水平、饮食习惯和身体状况，包含了每个人的17个属性特征以及给定的肥胖等级分类（总共有7种）。现在我们要根据这份数据集构建决策树进行肥胖等级分类。<br>
+<br></p>
+</li>
+<li>
+<p>实验原理：</p>
+<ul>
+<li>决策树：
+<ul>
+<li>决策树思想：在我们进行人为分类时，通常的思路是用某种特征属性作为分类的标准，比如西瓜的好坏，有经验的瓜农可以根据花纹的颜色来判断西瓜是好是坏，如果颜色深，瓜农认为是好瓜，如果颜色浅，瓜农认为是坏瓜。这样简单通过一个特征进行分类的结果不一定可信，但是我们将这种思路推广开，如果通过多个特征和多次分类，可以大大提高判断结果的准确率。决策树的思想正是来源于此，我们将多次分类的过程抽象为在树结构上的多次寻找子结点，直到寻找到叶结点，将该样本划分为这个叶结点的类别。</li>
+<li>决策树构建：我们可以递归构建决策树，每个结点都有其记录样本和子结点判断属性，叶结点还有划分类别。这样我们从根结点开始，依次递归构建每个子结点，每个子结点选择对应的属性值进行划分，完成决策树构建。</li>
+</ul>
+</li>
+<li>划分属性的选择：
+<ul>
+<li>信息熵：信息熵是一组不同分类的样本的数据一致程度，如果信息熵越小，数据一致性越高，否则越小。我们可以根据 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>n</mi><mi>t</mi><mo>=</mo><mo>−</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></msubsup><msub><mi>p</mi><mi>i</mi></msub><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><msub><mi>p</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">Ent=-\sum_{i=0}^kp_ilog_2p_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2887em;vertical-align:-0.2997em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.989em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 来计算一组样本的信息熵，其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">p_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 是第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 类在样本中出现的概率也即占比。</li>
+<li>信息增益：在决策树的构建过程中，对于每个子结点，我们并没有考虑如何选择最佳的属性值进行分类。我们可以通过信息增益来衡量不同属性的分类效果，信息增益是指将原样本划分为不同样本之后信息熵的减少值，信息增益 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mi>E</mi><mi>n</mi><mi>t</mi><mo>−</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></msubsup><mfrac><msub><mi>D</mi><mi>i</mi></msub><mi>D</mi></mfrac><mi>E</mi><mi>n</mi><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\delta=Ent-\sum_{i=0}^k\frac{D_i}{D}Ent_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.334em;vertical-align:-0.345em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.989em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:-0.0278em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">n</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，即原信息熵减去分类后的加权平均熵。因此我们可以计算出不同属性分类的信息增益，选择当前最大信息增益的属性进行分类。</li>
+</ul>
+</li>
+<li>连续和离散值：
+<ul>
+<li>不同属性有连续取值和离散取值两种情况，对这两种情况我们的划分方法也是不同的。</li>
+<li>离散取值：如果当前选择属性的取值是离散的，那么直接将每个取值作为一个分类，有几个分类就有几个子结点进行选择。</li>
+<li>连续取值：对于连续取值，我们将样本的取值集合升序排列，然后计算每两个相邻样本的平均值作为候选划分值。然后根据每个候选划分值将原样本划分为两部分，计算其信息增益。然后从候选划分值中选出信息增益最大的值，以此进行划分。事实上，对于离散或者连续取值都可以按照这个方法进行处理，相比于离散取值的每个取值一个分类能取得更好的效果，在本次实验中，我们也正是这样处理的。<br>
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>实验过程：</p>
+<ul>
+<li>Node 类的定义：<br>
+框架并没有给出决策树每个结点的定义。对于每个叶结点，应该具有 feature_index ，即这个叶结点对应判别特征的索引。还要有判别值 threshold 作为判别依据。还要有 value ，即这个结点所属的类别，对于非叶结点，value 默认为-1。除此之外，还应该有 child 子结点数组。据此，得到以下定义：<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 叶结点</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Node</span><span class="token punctuation">:</span>
+  <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> feature_index<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> threshold<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> value<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      self<span class="token punctuation">.</span>feature_index <span class="token operator">=</span> feature_index
+      self<span class="token punctuation">.</span>threshold <span class="token operator">=</span> threshold
+      self<span class="token punctuation">.</span>value <span class="token operator">=</span> value
+      self<span class="token punctuation">.</span>child <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+</code></pre></li>
+<li>计算信息熵：<br>
+对于给定的 y 集合，我们要计算出其信息熵，统计出每个 y 值的概率，然后根据上面给出的公式计算即可。<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 计算信息熵  </span>
+<span class="token keyword keyword-def">def</span> <span class="token function">get_ent</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y_unique <span class="token operator">=</span> np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    count_array <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>y_unique<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-for">for</span> k <span class="token keyword keyword-in">in</span> y<span class="token punctuation">:</span>
+        count_array<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> count_array<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
+    all_counts <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> all_counts <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword keyword-or">or</span> <span class="token builtin">len</span><span class="token punctuation">(</span>y_unique<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> <span class="token number">0</span>
+    <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> y_unique<span class="token punctuation">:</span>
+            count_array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> count_array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">/</span> all_counts
+        ent <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>count_array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-if">if</span> count_array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                ent <span class="token operator">=</span> ent <span class="token operator">-</span> count_array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>np<span class="token punctuation">.</span>log2<span class="token punctuation">(</span>count_array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> ent
+</code></pre></li>
+<li>寻找最佳分割属性：<br>
+正如我们在决策树连续取值最优分割中描述的，对于离散取值和连续取值，我们都采取这种方法进行寻找最佳分割。对于每个属性 col ，计算其可能分割值 sample_decide ，然后根据每个分割值对 y 分割得到 choose_y 和 remain_y ，计算其信息收益，然后选取最大的信息收益对应的 sample_decide 值作为 col 的 threshold 值，并记录 对应的 ent 值。然后从所有的 ent 中选择最大 ent 对应的属性 col ，根据这个 col 属性和对应的 threshold 构造子结点返回。代码如下：<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">find_best_spilt</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ent_D <span class="token operator">=</span> self<span class="token punctuation">.</span>get_ent<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    sample_count <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    threshold <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X<span class="token punctuation">.</span>columns<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    ent <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X<span class="token punctuation">.</span>columns<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    current <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword keyword-for">for</span> col <span class="token keyword keyword-in">in</span> X<span class="token punctuation">.</span>columns <span class="token punctuation">:</span> 
+        sample_col <span class="token operator">=</span> X<span class="token punctuation">[</span>col<span class="token punctuation">]</span>
+        sample_unique <span class="token operator">=</span> np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>sample_col<span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sample_unique<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            sample_decide <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>sample_unique<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>sample_unique<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">:</span>
+                sample_decide<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>sample_unique<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> sample_unique<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span> 
+            record_ent <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>sample_decide<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>sample_decide<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> 
+                choose_indices <span class="token operator">=</span> X<span class="token punctuation">[</span>col<span class="token punctuation">]</span> <span class="token operator">&lt;</span> sample_decide<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                choose_y <span class="token operator">=</span> y<span class="token punctuation">[</span>choose_indices<span class="token punctuation">]</span>
+                remain_y <span class="token operator">=</span> y<span class="token punctuation">[</span><span class="token operator">~</span>choose_indices<span class="token punctuation">]</span>
+                choose_y_len <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>choose_y<span class="token punctuation">)</span>
+                remain_y_len <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>remain_y<span class="token punctuation">)</span>
+                choose_y_ent <span class="token operator">=</span> self<span class="token punctuation">.</span>get_ent<span class="token punctuation">(</span>choose_y<span class="token punctuation">)</span>
+                remain_y_ent <span class="token operator">=</span> self<span class="token punctuation">.</span>get_ent<span class="token punctuation">(</span>remain_y<span class="token punctuation">)</span>
+                current_ent <span class="token operator">=</span> <span class="token punctuation">(</span>choose_y_len <span class="token operator">*</span> choose_y_ent <span class="token operator">+</span> 
+                               remain_y_len <span class="token operator">*</span> remain_y_ent<span class="token punctuation">)</span> <span class="token operator">/</span> sample_count
+                add_ent <span class="token operator">=</span> ent_D <span class="token operator">-</span> current_ent
+                record_ent<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> add_ent
+            max_index <span class="token operator">=</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>record_ent<span class="token punctuation">)</span>
+            threshold<span class="token punctuation">[</span>current<span class="token punctuation">]</span> <span class="token operator">=</span> sample_decide<span class="token punctuation">[</span>max_index<span class="token punctuation">]</span>
+            ent<span class="token punctuation">[</span>current<span class="token punctuation">]</span> <span class="token operator">=</span> record_ent<span class="token punctuation">[</span>max_index<span class="token punctuation">]</span>
+        current <span class="token operator">=</span> current <span class="token operator">+</span> <span class="token number">1</span>
+    max_index <span class="token operator">=</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>ent<span class="token punctuation">)</span>
+    max_threshold <span class="token operator">=</span> threshold<span class="token punctuation">[</span>max_index<span class="token punctuation">]</span>
+    <span class="token keyword keyword-return">return</span> Node<span class="token punctuation">(</span>feature_index<span class="token operator">=</span>X<span class="token punctuation">.</span>columns<span class="token punctuation">[</span>max_index<span class="token punctuation">]</span><span class="token punctuation">,</span>threshold<span class="token operator">=</span>max_threshold<span class="token punctuation">)</span>
+</code></pre></li>
+<li>决策树的构建：<br>
+有了最佳分割函数，我们构造决策树只需要简单递归构造即可。输入 X 和 y 作为数据集，如果 y 只有一个取值，说明分类达到了目标，直接返回 value = y 的 Node 结点。否则调用 find_best_spilt 函数得到当前最佳结点，然后递归调用 build_tree 函数构建左右子结点即可。代码如下：<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">build_tree</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    now_class <span class="token operator">=</span> np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    counts <span class="token operator">=</span> np<span class="token punctuation">.</span>bincount<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    max_index <span class="token operator">=</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>counts<span class="token punctuation">)</span>
+    <span class="token comment"># 如果当前y只有一种说明分类成功</span>
+    <span class="token keyword keyword-if">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>now_class<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> Node<span class="token punctuation">(</span>value<span class="token operator">=</span>now_class<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-else">else</span> <span class="token punctuation">:</span>
+        current_node <span class="token operator">=</span> self<span class="token punctuation">.</span>find_best_spilt<span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+        choose_indices <span class="token operator">=</span> X<span class="token punctuation">[</span>current_node<span class="token punctuation">.</span>feature_index<span class="token punctuation">]</span> <span class="token operator">&lt;</span> current_node<span class="token punctuation">.</span>threshold
+        choose_X <span class="token operator">=</span> X<span class="token punctuation">[</span>choose_indices<span class="token punctuation">]</span>
+        remain_X <span class="token operator">=</span> X<span class="token punctuation">[</span><span class="token operator">~</span>choose_indices<span class="token punctuation">]</span>
+        choose_y <span class="token operator">=</span> y<span class="token punctuation">[</span>choose_indices<span class="token punctuation">]</span>
+        remain_y <span class="token operator">=</span> y<span class="token punctuation">[</span><span class="token operator">~</span>choose_indices<span class="token punctuation">]</span>
+        <span class="token keyword keyword-if">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>choose_X<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">0</span> <span class="token punctuation">:</span>
+            current_node<span class="token punctuation">.</span>child<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Node<span class="token punctuation">(</span>value<span class="token operator">=</span>max_index<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+            current_node<span class="token punctuation">.</span>child<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>build_tree<span class="token punctuation">(</span>choose_X<span class="token punctuation">,</span>choose_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>remain_X<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            current_node<span class="token punctuation">.</span>child<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Node<span class="token punctuation">(</span>value<span class="token operator">=</span>max_index<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+            current_node<span class="token punctuation">.</span>child<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>build_tree<span class="token punctuation">(</span>remain_X<span class="token punctuation">,</span>remain_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> current_node
+</code></pre></li>
+<li>测试集的预测：<br>
+对于每个测试样例 sample ，递归遍历决策树即可，如果 sample 在当前 node.feature_index 值小于 node.threshold 值，那么就应该访问左结点，否则访问右结点，直到访问到叶结点返回叶结点的 value 值作为分类。代码如下：<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 递归遍历决策树</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">get_decision</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">,</span> sample<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-if">if</span> node<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-if">if</span> sample<span class="token punctuation">[</span>node<span class="token punctuation">.</span>feature_index<span class="token punctuation">]</span> <span class="token operator">&gt;</span> node<span class="token punctuation">.</span>threshold <span class="token punctuation">:</span> 
+            <span class="token keyword keyword-return">return</span> self<span class="token punctuation">.</span>get_decision<span class="token punctuation">(</span>node<span class="token punctuation">.</span>child<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sample<span class="token punctuation">)</span>
+        <span class="token keyword keyword-else">else</span> <span class="token punctuation">:</span>
+            <span class="token keyword keyword-return">return</span> self<span class="token punctuation">.</span>get_decision<span class="token punctuation">(</span>node<span class="token punctuation">.</span>child<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sample<span class="token punctuation">)</span>
+    <span class="token keyword keyword-else">else</span> <span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> node<span class="token punctuation">.</span>value
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>实验结果：<br>
+我们运行代码，输出结果，达到了高达0.9598108747044918的正确率，如图所示：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/decision_tree.jpg" alt=""><br>
+<br></li>
+</ul>
+<h4 id="pcakmeans">PCAKMeans </h4>
+<ul>
+<li>
+<p>实验背景：现在有一定数量的单词，以及根据这些单词训练好的高维度词向量，我们需要将其从高维降低到二维，然后对其进行分类，观察不同单词之间语义关系和在二维散点图上的距离之间的关系。<br>
+<br></p>
+</li>
+<li>
+<p>实验原理：</p>
+<ul>
+<li>PCA：
+<ul>
+<li>算法思想：在我们进行聚类分析时，如果向量的维度较低，可以直接处理。但是现实情况通常是我们有多个属性值，向量的维度很高，这个时候直接进行聚类分析不可行。面对“维度灾难”，PCA算法巧妙地采用降维的思想，将高维向量投影到低维，用投影后的点进行聚类。</li>
+<li>算法实现：首先计算出所有原向量的均值向量，然后将每个向量中心化，即将每个向量减去均值向量。然后计算处理后的向量集的协方差矩阵，并对协方差矩阵进行特征值分解，得到特征值和特征向量。对于我们需要的维度 d ，我们取前 d 大的特征值对应的特征向量组成投影矩阵。将此投影矩阵与原向量相乘即可降维得到 d 维向量。</li>
+</ul>
+</li>
+<li>KMeans：
+<ul>
+<li>算法思想：普通聚类算法准确率偏低，为了解决这个问题，KMeans 采用动态聚类的思想。每次迭代更新每个聚类的中心重新聚类，直到聚类中心不变，通过这种迭代降低错误率。</li>
+<li>算法实现：首先规定聚类个数 K ，并随机选取 K 个点作为初始聚类中心。然后开始迭代，每个点选择最近的一个中心作为其聚类，完成一轮聚类后，计算每个聚类的均值点作为新的中心开始下一轮迭代。<br>
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>实验过程：</p>
+<ul>
+<li>
+<p>核函数的实现：<br>
+在 PCA 中可以通过核函数进行转换，然后降维。主要核函数有线性核函数、多项式核函数、径向基核函数，在本次实验中我们实现了这几个核函数，但是根据实验文档给出的 PCA 计算步骤，并没有使用核函数。代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># index是次数</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">get_kernel_function</span><span class="token punctuation">(</span>kernel<span class="token punctuation">:</span><span class="token builtin">str</span><span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token comment"># 线性核，计算两个向量的点积dot</span>
+<span class="token keyword keyword-if">if</span> kernel <span class="token operator">==</span> <span class="token string">"linear"</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-lambda">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+<span class="token comment"># 多项式核，先取点积再加指数，这里默认2次</span>
+<span class="token keyword keyword-elif">elif</span> kernel <span class="token operator">==</span> <span class="token string">"polynomial"</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-lambda">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token punctuation">(</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">**</span>index  
+<span class="token comment"># 径向基函数核，非线性</span>
+<span class="token keyword keyword-elif">elif</span> kernel <span class="token operator">==</span> <span class="token string">"rbf"</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">rbf_kernel</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> gamma<span class="token operator">=</span><span class="token number">0.05</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token operator">-</span>gamma <span class="token operator">*</span> np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>norm<span class="token punctuation">(</span>x <span class="token operator">-</span> y<span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> rbf_kernel
+<span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token boolean">None</span>
+</code></pre></li>
+<li>
+<p>PCA.fit 函数实现：<br>
+fit 函数计算特征向量，即降维矩阵。根据文档给出的步骤：调用 np.mean 库函数计算 X 的均值向量 self.mean ，用 X 减去 self.mean 得到中心矩阵，用 np.cov 库函数计算中心矩阵的协方差矩阵，用 np.linalg.eig 库函数计算协方差矩阵的特征值和特征向量，对特征值用 np.argsort 库函数升序排序，再取后两个特征值对应的特征向量，就得到了降维矩阵。代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">fit</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">:</span>np<span class="token punctuation">.</span>ndarray<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token comment"># 根据文档给出的步骤：</span>
+<span class="token comment"># 计算平均值，axis表示沿着行方向进行操作，即计算每列的平均值</span>
+self<span class="token punctuation">.</span>mean <span class="token operator">=</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>X<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token comment"># 计算中心矩阵</span>
+X_center <span class="token operator">=</span> X <span class="token operator">-</span> self<span class="token punctuation">.</span>mean
+<span class="token comment"># 计算协方差矩阵</span>
+cov_matrix <span class="token operator">=</span> np<span class="token punctuation">.</span>cov<span class="token punctuation">(</span>X_center<span class="token punctuation">,</span> rowvar<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+<span class="token comment"># 计算特征值和特征向量</span>
+special_values<span class="token punctuation">,</span> special_vectors <span class="token operator">=</span> np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>eig<span class="token punctuation">(</span>cov_matrix<span class="token punctuation">)</span>
+<span class="token comment"># 对特征值进行升序排序</span>
+sort_index <span class="token operator">=</span> np<span class="token punctuation">.</span>argsort<span class="token punctuation">(</span>special_values<span class="token punctuation">)</span>
+<span class="token comment"># 取特征值前二的特征向量，即倒数后两个，因为升序</span>
+self<span class="token punctuation">.</span>sepcial_matrix <span class="token operator">=</span> special_vectors<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> sort_index<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span>self<span class="token punctuation">.</span>n_components<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-return">return</span> self
+</code></pre></li>
+<li>
+<p>transform 函数实现：<br>
+transform 函数将原样本 X 降维为二维向量，只需要调用 np.dot 库函数进行矩阵乘法即可。代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">transform</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">:</span>np<span class="token punctuation">.</span>ndarray<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token comment"># 进行矩阵乘法降维</span>
+X_center <span class="token operator">=</span> X <span class="token operator">-</span> self<span class="token punctuation">.</span>mean
+<span class="token keyword keyword-return">return</span> np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>X_center<span class="token punctuation">,</span> self<span class="token punctuation">.</span>sepcial_matrix<span class="token punctuation">)</span>
+</code></pre></li>
+<li>
+<p>initialize_centers 函数实现：<br>
+initialize_centers 初始化聚类的中心，我们调用 np.random.choice 库函数，从样本中不重复随机抽样10个，然后对其取均值得到中心，记录在 points 数组中。代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 初始化中心</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">initialize_centers</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> points<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    sample_count<span class="token punctuation">,</span> div <span class="token operator">=</span> points<span class="token punctuation">.</span>shape
+    self<span class="token punctuation">.</span>centers <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>n_clusters<span class="token punctuation">,</span> div<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>n_clusters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 从样本的下标中随机抽样，抽取10个，不可重复</span>
+        random_index <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>sample_count<span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> replace<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+        <span class="token comment"># 将抽取的10个样本取均值，作为中心</span>
+        self<span class="token punctuation">.</span>centers<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> points<span class="token punctuation">[</span>random_index<span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> self<span class="token punctuation">.</span>centers
+</code></pre></li>
+<li>
+<p>assign_points 函数实现：<br>
+assign_points 对每个样本根据 points 中的中心点进行分类。遍历每个样本，然后遍历每个中心，计算到每个中心的欧氏距离，选择欧式距离最小的中心划分，将对应中心记录在 labels 数组里面。代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 对每个样本进行划分</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">assign_points</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> points<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    point_count <span class="token operator">=</span> points<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    center_count <span class="token operator">=</span> self<span class="token punctuation">.</span>centers<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token comment"># 初始化标签</span>
+    self<span class="token punctuation">.</span>labels <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>point_count<span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">)</span>  
+    <span class="token comment"># 遍历每个点的下标</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>point_count<span class="token punctuation">)</span><span class="token punctuation">:</span>  
+        <span class="token comment"># 初始化最近距离和最近中心</span>
+        min_distance <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'inf'</span><span class="token punctuation">)</span>  
+        closest_center <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>  
+        <span class="token comment"># 遍历每个中心</span>
+        <span class="token keyword keyword-for">for</span> j <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>center_count<span class="token punctuation">)</span><span class="token punctuation">:</span>  
+            <span class="token comment"># 计算欧式距离</span>
+            distance <span class="token operator">=</span> np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>points<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>centers<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+            <span class="token keyword keyword-if">if</span> distance <span class="token operator">&lt;</span> min_distance<span class="token punctuation">:</span>
+                <span class="token comment"># 更新最近点</span>
+                min_distance <span class="token operator">=</span> distance
+                closest_center <span class="token operator">=</span> j
+        <span class="token comment"># 将最近的中心索引赋值给当前点的标签</span>
+        self<span class="token punctuation">.</span>labels<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> closest_center  
+    <span class="token keyword keyword-return">return</span> self<span class="token punctuation">.</span>labels
+</code></pre></li>
+<li>
+<p>update_points 函数实现：<br>
+更新中心点较为简单，将每个簇的点取平均即可成为新中心点。代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code> <span class="token comment"># 更新中心点</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">update_centers</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> points<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 将每个簇的点取平均得到新中心点</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>n_clusters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>centers<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>points<span class="token punctuation">[</span>self<span class="token punctuation">.</span>labels <span class="token operator">==</span> i<span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre></li>
+<li>
+<p>KMeans.fit 函数实现：<br>
+fit 函数进行 KMeans 的迭代，initialize_centers 之后，assign_points 然后 update_centers ，直到更新前后中心相同。代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 迭代更新</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">fit</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> points<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>initialize_centers<span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+    <span class="token keyword keyword-for">for</span> _ <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>max_iter<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>assign_points<span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+        <span class="token comment"># 保留之前的中心</span>
+        before_centers <span class="token operator">=</span> self<span class="token punctuation">.</span>centers<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 更新中心</span>
+        self<span class="token punctuation">.</span>update_centers<span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+        <span class="token comment"># 如果之前的中心和现在的中心完全一样，停止KMeans</span>
+        <span class="token keyword keyword-if">if</span> np<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span>before_centers <span class="token operator">==</span> self<span class="token punctuation">.</span>centers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-break">break</span>
+    <span class="token keyword keyword-return">return</span> self
+</code></pre></li>
+</ul>
+<br>
+</li>
+<li>
+<p>实验结果：<br>
+我们将经过 PCA 降维和 KMeans 聚类的数据用散点图展示出来，相同颜色表示相同分类，结果非常符合预期：<br>
+<img src="PCA_KMeans.png" alt=""><br>
+<br></p>
+</li>
+</ul>
+<h3 id="part_2">Part_2 </h3>
+<h4 id="深度学习">深度学习 </h4>
+<ul>
+<li>
+<p>实验架构：</p>
+<ul>
+<li>MoE（Mixture of Experts）：MoE是一种模型架构，旨在通过组合多个专家模型来提高整体模型的性能。其核心思想是将模型分成多个子模型（专家），每个专家负责处理数据的不同部分或不同方面。其架构通常由两部分组成，一个是Router（路由器），负责根据输入数据将特定部分分配给不同的专家；另一个是专家网络，即实际处理数据的多个子模型。</li>
+<li>Transformer：Transformer是一种革命性的神经网络架构。它首次引入了注意力机制的全局性使用，取代了传统的循环神经网络（RNN）结构。Transformer由编码器和解码器构成，每个部分都包含多个注意力头（Multi-Head Attention）和全连接层。通过注意力机制，Transformer能够并行处理输入序列中的不同位置信息，极大提高了处理长距离依赖性的能力。</li>
+<li>Sparse MoE Layer：Sparse MoE Layer是对传统MoE的改进，旨在减少计算和存储成本。传统MoE中，每个输入都分配给所有专家，而Sparse MoE Layer通过使用稀疏选择机制，仅选择少数专家来处理特定的输入。在大规模数据和模型中，Sparse MoE Layer能够更高效地利用计算资源，并保持模型性能。</li>
+<li>Router：Router是MoE中负责分配输入数据给不同专家的组件，根据输入数据的特征向量，通过学习的方式动态地将输入数据路由给适合的专家。</li>
+<li>Multi-Head Attention：Multi-Head Attention 是 Transformer 架构中的核心组件之一，用于捕捉输入序列中不同位置的关系和依赖关系。它允许模型同时关注输入序列的不同部分，通过多个注意力头并行计算不同的注意力表示，每个注意力头独立地学习注意力权重，然后通过加权平均或拼接等方式整合不同头的输出。<br>
+<br></li>
+</ul>
+</li>
+<li>
+<p>实验过程：</p>
+<ul>
+<li>
+<p>数据预处理与Tokenizer<br>
+我们实现了一个简单的Tokenizer类来处理文本数据。Tokenizer负责将文本转换为模型可接受的编码序列，并且支持解码回文本。实现代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Tokenizer</span><span class="token punctuation">:</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> dataPath<span class="token punctuation">:</span><span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>dataPath<span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> f<span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>dataset <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>generate_vocabulary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 产生符号表</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">generate_vocabulary</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>char2index <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    self<span class="token punctuation">.</span>index2char <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token comment"># 添加开始和结束符号</span>
+    self<span class="token punctuation">.</span>char2index<span class="token punctuation">[</span><span class="token string">"&lt;START&gt;"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+    self<span class="token punctuation">.</span>char2index<span class="token punctuation">[</span><span class="token string">"&lt;END&gt;"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+    self<span class="token punctuation">.</span>index2char<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"&lt;START&gt;"</span>
+    self<span class="token punctuation">.</span>index2char<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"&lt;END&gt;"</span>
+
+    <span class="token comment"># 对数据集中的每个字符都标号，从2开始</span>
+    index <span class="token operator">=</span> <span class="token number">2</span> 
+    <span class="token keyword keyword-for">for</span> char <span class="token keyword keyword-in">in</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>dataset<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-if">if</span> char <span class="token keyword keyword-not">not</span> <span class="token keyword keyword-in">in</span> self<span class="token punctuation">.</span>char2index<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>char2index<span class="token punctuation">[</span>char<span class="token punctuation">]</span> <span class="token operator">=</span> index
+            self<span class="token punctuation">.</span>index2char<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> char
+            index <span class="token operator">+=</span> <span class="token number">1</span>
+
+<span class="token comment"># 对数据集进行编码</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">encode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> sentence <span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">:</span>
+    <span class="token comment"># 添加开始符号</span>
+    tokenflow <span class="token operator">=</span> <span class="token punctuation">[</span>self<span class="token punctuation">.</span>char2index<span class="token punctuation">[</span><span class="token string">"&lt;START&gt;"</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+    <span class="token comment"># 对于输入句子的每个字符，依次编号添加到tokens中</span>
+    <span class="token comment"># 如果有不在符号表中的字符，用终结符替代</span>
+    <span class="token keyword keyword-for">for</span> char <span class="token keyword keyword-in">in</span> sentence<span class="token punctuation">:</span>
+        tokenflow<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>char2index<span class="token punctuation">.</span>get<span class="token punctuation">(</span>char<span class="token punctuation">,</span> self<span class="token punctuation">.</span>char2index<span class="token punctuation">[</span><span class="token string">"&lt;END&gt;"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
+    <span class="token comment"># 添加终结符号</span>
+    tokenflow<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>char2index<span class="token punctuation">[</span><span class="token string">"&lt;END&gt;"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment"># 以Tensor形式返回  </span>
+    <span class="token keyword keyword-return">return</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span>tokenflow<span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span><span class="token builtin">long</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 编码后进行解码</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">decode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> tokens <span class="token punctuation">:</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+    <span class="token comment"># 转换为list</span>
+    <span class="token keyword keyword-if">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>tokens<span class="token punctuation">,</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        tokens <span class="token operator">=</span> tokens<span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 解码为字符流</span>
+    charflow <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-for">for</span> token <span class="token keyword keyword-in">in</span> tokens<span class="token punctuation">:</span>
+        <span class="token comment"># 未知编码返回&lt;UNK&gt;即Unknown</span>
+        char <span class="token operator">=</span> self<span class="token punctuation">.</span>index2char<span class="token punctuation">.</span>get<span class="token punctuation">(</span>token<span class="token punctuation">,</span> <span class="token string">"&lt;UNK&gt;"</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> char <span class="token keyword keyword-not">not</span> <span class="token keyword keyword-in">in</span> <span class="token punctuation">[</span><span class="token string">"&lt;START&gt;"</span><span class="token punctuation">,</span> <span class="token string">"&lt;END&gt;"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            charflow<span class="token punctuation">.</span>append<span class="token punctuation">(</span>char<span class="token punctuation">)</span>
+    <span class="token comment"># 连接成字符串返回</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>charflow<span class="token punctuation">)</span>
+</code></pre></li>
+<li>
+<p>数据集与数据加载器<br>
+我们定义了 ShakespeareDataset 类和 create_dataloader 函数用于处理文本数据集和创建数据加载器。数据集按照指定的 chunk_size 进行切分，并在训练和验证集之间进行划分。实现代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">ShakespeareDataset</span><span class="token punctuation">(</span>Dataset<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> filepath<span class="token punctuation">,</span> tokenizer<span class="token punctuation">,</span> chunk_size<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>tokenizer <span class="token operator">=</span> tokenizer
+    <span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filepath<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+        text <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>encoded <span class="token operator">=</span> self<span class="token punctuation">.</span>tokenizer<span class="token punctuation">.</span>encode<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>chunk_size <span class="token operator">=</span> chunk_size
+
+<span class="token keyword keyword-def">def</span> <span class="token function">__len__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>encoded<span class="token punctuation">)</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>chunk_size
+
+<span class="token keyword keyword-def">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> idx<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 提取文本，文本作为输入，每个字符的下一个字符作为标签（size+1）</span>
+    chunk <span class="token operator">=</span> self<span class="token punctuation">.</span>encoded<span class="token punctuation">[</span>idx<span class="token punctuation">:</span> idx <span class="token operator">+</span> self<span class="token punctuation">.</span>chunk_size<span class="token punctuation">]</span>
+    label <span class="token operator">=</span> self<span class="token punctuation">.</span>encoded<span class="token punctuation">[</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span> idx <span class="token operator">+</span> self<span class="token punctuation">.</span>chunk_size <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-return">return</span> chunk<span class="token punctuation">,</span> label
+
+tokenizer <span class="token operator">=</span> Tokenizer<span class="token punctuation">(</span>dataPath<span class="token operator">=</span><span class="token string">"input.txt"</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">create_dataloader</span><span class="token punctuation">(</span>filepath<span class="token punctuation">,</span> tokenizer<span class="token punctuation">,</span> chunk_size<span class="token punctuation">,</span> batch_size<span class="token punctuation">,</span> shuffle<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    dataset <span class="token operator">=</span> ShakespeareDataset<span class="token punctuation">(</span>filepath<span class="token punctuation">,</span> tokenizer<span class="token punctuation">,</span> chunk_size<span class="token punctuation">)</span>
+    train_dataset<span class="token punctuation">,</span>val_dataset <span class="token operator">=</span> torch<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>data<span class="token punctuation">.</span>random_split
+    <span class="token punctuation">(</span>dataset<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>dataset<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">0.8</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>dataset<span class="token punctuation">)</span><span class="token operator">-</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>dataset<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">0.8</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    train_dataloader <span class="token operator">=</span> DataLoader<span class="token punctuation">(</span>train_dataset<span class="token punctuation">,</span> batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">,</span> shuffle<span class="token operator">=</span>shuffle<span class="token punctuation">)</span>
+    val_dataloader <span class="token operator">=</span> DataLoader<span class="token punctuation">(</span>val_dataset<span class="token punctuation">,</span> batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">,</span> shuffle<span class="token operator">=</span>shuffle<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> train_dataloader<span class="token punctuation">,</span> val_dataloader
+
+train_dataloader<span class="token punctuation">,</span>val_dataloader <span class="token operator">=</span> create_dataloader<span class="token punctuation">(</span><span class="token string">'input.txt'</span><span class="token punctuation">,</span> 
+                                                    tokenizer<span class="token punctuation">,</span> chunk_size<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></li>
+<li>
+<p>模型组件：Multi-Head Attention, Expert, TopkRouter, SparseMoE<br>
+我们实现了Transformer模型所需的几个关键组件：Multi-Head Attention: 多头注意力机制用于提取输入序列中的信息；Expert: 专家网络，用于处理稀疏多专家模块中每个专家的计算；TopkRouter: 用于选择稀疏多专家模块中的顶部K个专家；SparseMoE: 稀疏多专家模块，结合了TopkRouter和多个Expert，以增强模型的表达能力。</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">MultiHeadAttention</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n_heads<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> head_size<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> seq_len<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> embed_size<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>n_heads <span class="token operator">=</span> n_heads
+        <span class="token comment"># 计算头的大小</span>
+        self<span class="token punctuation">.</span>head_size <span class="token operator">=</span> embed_size <span class="token operator">//</span> n_heads  
+        <span class="token comment"># 确保整除，分割正确</span>
+        <span class="token keyword keyword-assert">assert</span> embed_size <span class="token operator">%</span> n_heads <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"attention:embed_size should divide n_heads!"</span>
+        <span class="token comment"># 建立多头注意力层</span>
+        self<span class="token punctuation">.</span>heads <span class="token operator">=</span> nn<span class="token punctuation">.</span>ModuleList<span class="token punctuation">(</span><span class="token punctuation">[</span>HeadAttention<span class="token punctuation">(</span>seq_len<span class="token punctuation">,</span> embed_size<span class="token punctuation">,</span> 
+        self<span class="token punctuation">.</span>head_size<span class="token punctuation">)</span> <span class="token keyword keyword-for">for</span> _ <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_heads<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>projection <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> embed_size<span class="token punctuation">)</span>
+
+
+    <span class="token keyword keyword-def">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        batch_size<span class="token punctuation">,</span> seq_len<span class="token punctuation">,</span> embed_size <span class="token operator">=</span> inputs<span class="token punctuation">.</span>shape
+        <span class="token comment"># 确保匹配</span>
+        <span class="token keyword keyword-assert">assert</span> embed_size <span class="token operator">==</span> self<span class="token punctuation">.</span>n_heads <span class="token operator">*</span> self<span class="token punctuation">.</span>head_size<span class="token punctuation">,</span> 
+        <span class="token string">"embed_size must be equal to n_heads * head_size"</span>
+        <span class="token comment"># 计算每个头的输出</span>
+        outputs <span class="token operator">=</span> <span class="token punctuation">[</span>head<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span> <span class="token keyword keyword-for">for</span> head <span class="token keyword keyword-in">in</span> self<span class="token punctuation">.</span>heads<span class="token punctuation">]</span> 
+        <span class="token comment"># 链接所有的头输出</span>
+        connect_output <span class="token operator">=</span> torch<span class="token punctuation">.</span>cat<span class="token punctuation">(</span>outputs<span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> 
+        <span class="token comment"># 回到最初的大小</span>
+        output <span class="token operator">=</span> self<span class="token punctuation">.</span>projection<span class="token punctuation">(</span>connect_output<span class="token punctuation">)</span>  
+        <span class="token keyword keyword-return">return</span> output  
+
+<span class="token comment"># 专家层</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Expert</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> embed_size<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 初始化两个线性层</span>
+        self<span class="token punctuation">.</span>fc1 <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> <span class="token number">4</span> <span class="token operator">*</span> embed_size<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>fc2 <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">*</span> embed_size<span class="token punctuation">,</span> embed_size<span class="token punctuation">)</span>
+
+    <span class="token keyword keyword-def">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        swap <span class="token operator">=</span> self<span class="token punctuation">.</span>fc1<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span> 
+        <span class="token comment"># 实施非线性激活</span>
+        swap <span class="token operator">=</span> F<span class="token punctuation">.</span>relu<span class="token punctuation">(</span>swap<span class="token punctuation">)</span> 
+        outputs <span class="token operator">=</span> self<span class="token punctuation">.</span>fc2<span class="token punctuation">(</span>swap<span class="token punctuation">)</span> 
+        <span class="token keyword keyword-return">return</span> outputs
+
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">TopkRouter</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> embed_size<span class="token punctuation">,</span> num_experts<span class="token punctuation">,</span> active_experts<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>num_experts <span class="token operator">=</span> num_experts
+        self<span class="token punctuation">.</span>active_experts <span class="token operator">=</span> active_experts
+        <span class="token comment"># 对专家层进行线性变换</span>
+        self<span class="token punctuation">.</span>router_weights <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> num_experts<span class="token punctuation">)</span>
+    
+    <span class="token keyword keyword-def">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        batch_size<span class="token punctuation">,</span> seq_len<span class="token punctuation">,</span> embed_size <span class="token operator">=</span> inputs<span class="token punctuation">.</span>shape
+        <span class="token comment"># 为每个token计算logits</span>
+        logits <span class="token operator">=</span> self<span class="token punctuation">.</span>router_weights<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+        <span class="token comment"># 实施softmax得到常规化结果</span>
+        router_output <span class="token operator">=</span> F<span class="token punctuation">.</span>softmax<span class="token punctuation">(</span>logits<span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> 
+        <span class="token comment"># 对于每个词token，选定前k个有最高权重的专家层</span>
+        topk_values<span class="token punctuation">,</span> indices <span class="token operator">=</span> torch<span class="token punctuation">.</span>topk<span class="token punctuation">(</span>router_output<span class="token punctuation">,</span> self<span class="token punctuation">.</span>active_experts<span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token comment"># 常规化选定的专家层</span>
+        topk_normalized <span class="token operator">=</span> topk_values <span class="token operator">/</span> topk_values<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> keepdim<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> topk_normalized<span class="token punctuation">,</span> indices
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">SparseMoE</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> embed_size<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> num_experts<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> active_experts<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>num_experts <span class="token operator">=</span> num_experts
+        self<span class="token punctuation">.</span>active_experts <span class="token operator">=</span> active_experts
+        <span class="token comment"># 初始化router</span>
+        self<span class="token punctuation">.</span>router <span class="token operator">=</span> TopkRouter<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> num_experts<span class="token punctuation">,</span> active_experts<span class="token punctuation">)</span>
+        <span class="token comment"># 初始化专家层</span>
+        self<span class="token punctuation">.</span>experts <span class="token operator">=</span> nn<span class="token punctuation">.</span>ModuleList<span class="token punctuation">(</span><span class="token punctuation">[</span>Expert<span class="token punctuation">(</span>embed_size<span class="token punctuation">)</span> <span class="token keyword keyword-for">for</span> _ <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_experts<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword keyword-def">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        batch_size<span class="token punctuation">,</span> seq_len<span class="token punctuation">,</span> embed_size <span class="token operator">=</span> inputs<span class="token punctuation">.</span>shape
+        router_output<span class="token punctuation">,</span> indices <span class="token operator">=</span> self<span class="token punctuation">.</span>router<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+        <span class="token comment"># 最终输出</span>
+        final_output <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+
+        <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>active_experts<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            expert_idx <span class="token operator">=</span> indices<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span>
+            <span class="token comment"># 准备掩码</span>
+            mask <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>batch_size<span class="token punctuation">,</span> seq_len<span class="token punctuation">,</span> self<span class="token punctuation">.</span>num_experts<span class="token punctuation">,</span> device<span class="token operator">=</span>inputs<span class="token punctuation">.</span>device<span class="token punctuation">)</span>
+            mask<span class="token punctuation">.</span>scatter_<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> expert_idx<span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token comment"># 从现在的专家收集输入</span>
+            selected_inputs <span class="token operator">=</span> inputs<span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> mask<span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            selected_inputs <span class="token operator">=</span> selected_inputs<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>dim<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span> 
+            <span class="token comment"># 对选定的输入实施专家层</span>
+            expert_output <span class="token operator">=</span> self<span class="token punctuation">.</span>experts<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">(</span>selected_inputs<span class="token punctuation">)</span>  
+            <span class="token comment"># 计算输出</span>
+            final_output <span class="token operator">+=</span> expert_output <span class="token operator">*</span> router_output<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> 
+        <span class="token keyword keyword-return">return</span> final_output
+</code></pre></li>
+<li>
+<p>Transformer Block<br>
+Transformer Block结合了多头注意力机制、稀疏多专家模块和前馈神经网络。此外，还包括Layer Normalization层以及Add &amp; Norm操作。</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Block</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> embed_size<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> n_heads<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> seq_len<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> 
+num_experts<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> active_experts<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 多头注意层</span>
+    self<span class="token punctuation">.</span>attention <span class="token operator">=</span> MultiHeadAttention<span class="token punctuation">(</span>n_heads<span class="token punctuation">,</span> embed_size <span class="token operator">//</span> n_heads<span class="token punctuation">,</span> seq_len<span class="token punctuation">,</span> embed_size<span class="token punctuation">)</span>
+    <span class="token comment"># SparseMoE</span>
+    self<span class="token punctuation">.</span>sparse_moe <span class="token operator">=</span> SparseMoE<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> num_experts<span class="token punctuation">,</span> active_experts<span class="token punctuation">)</span>
+    <span class="token comment"># 前馈层</span>
+    self<span class="token punctuation">.</span>feed_forward <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> <span class="token number">4</span> <span class="token operator">*</span> embed_size<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">*</span> embed_size<span class="token punctuation">,</span> embed_size<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 常规化层</span>
+    self<span class="token punctuation">.</span>ln1 <span class="token operator">=</span> nn<span class="token punctuation">.</span>LayerNorm<span class="token punctuation">(</span>embed_size<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>ln2 <span class="token operator">=</span> nn<span class="token punctuation">.</span>LayerNorm<span class="token punctuation">(</span>embed_size<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>ln3 <span class="token operator">=</span> nn<span class="token punctuation">.</span>LayerNorm<span class="token punctuation">(</span>embed_size<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 多头注意力</span>
+    attn_output <span class="token operator">=</span> self<span class="token punctuation">.</span>attention<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+    attn_output <span class="token operator">=</span> self<span class="token punctuation">.</span>ln1<span class="token punctuation">(</span>inputs <span class="token operator">+</span> attn_output<span class="token punctuation">)</span> 
+    <span class="token comment"># SparseMoE</span>
+    moe_output <span class="token operator">=</span> self<span class="token punctuation">.</span>sparse_moe<span class="token punctuation">(</span>attn_output<span class="token punctuation">)</span>
+    moe_output <span class="token operator">=</span> self<span class="token punctuation">.</span>ln2<span class="token punctuation">(</span>attn_output <span class="token operator">+</span> moe_output<span class="token punctuation">)</span>
+    <span class="token comment"># 前馈层</span>
+    ff_output <span class="token operator">=</span> self<span class="token punctuation">.</span>feed_forward<span class="token punctuation">(</span>moe_output<span class="token punctuation">)</span>
+    output <span class="token operator">=</span> self<span class="token punctuation">.</span>ln3<span class="token punctuation">(</span>moe_output <span class="token operator">+</span> ff_output<span class="token punctuation">)</span> 
+
+    <span class="token keyword keyword-return">return</span> output
+</code></pre></li>
+<li>
+<p>SparseMoETransformer模型<br>
+SparseMoETransformer模型整合了多个Transformer Block，并添加了Token Embedding、Positional Encoding、Layer Normalization和输出线性层。实现代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">SparseMoETransformer</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> vocab_size<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> seq_len<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> embed_size<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span>
+    n_layers<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> n_heads<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> num_experts<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">,</span> active_experts<span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    self<span class="token punctuation">.</span>seq_len <span class="token operator">=</span> seq_len
+    self<span class="token punctuation">.</span>embed_size <span class="token operator">=</span> embed_size
+    <span class="token comment"># 词汇嵌入、位置编码</span>
+    self<span class="token punctuation">.</span>token_embedding <span class="token operator">=</span> nn<span class="token punctuation">.</span>Embedding<span class="token punctuation">(</span>vocab_size<span class="token punctuation">,</span> embed_size<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>position_embedding <span class="token operator">=</span> nn<span class="token punctuation">.</span>Embedding<span class="token punctuation">(</span>seq_len<span class="token punctuation">,</span> embed_size<span class="token punctuation">)</span>
+    <span class="token comment"># Transformer块</span>
+    self<span class="token punctuation">.</span>blocks <span class="token operator">=</span> nn<span class="token punctuation">.</span>ModuleList<span class="token punctuation">(</span><span class="token punctuation">[</span>Block<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> n_heads<span class="token punctuation">,</span> 
+    seq_len<span class="token punctuation">,</span> num_experts<span class="token punctuation">,</span> active_experts<span class="token punctuation">)</span> <span class="token keyword keyword-for">for</span> _ <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_layers<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment"># 层常规化并且输出</span>
+    self<span class="token punctuation">.</span>layer_norm <span class="token operator">=</span> nn<span class="token punctuation">.</span>LayerNorm<span class="token punctuation">(</span>embed_size<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>output_layer <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>embed_size<span class="token punctuation">,</span> vocab_size<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">,</span> labels<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    batch_size<span class="token punctuation">,</span> seq_len <span class="token operator">=</span> inputs<span class="token punctuation">.</span>shape
+    <span class="token comment"># 为每个位置创建id</span>
+    position_ids <span class="token operator">=</span> torch<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>seq_len<span class="token punctuation">,</span> device<span class="token operator">=</span>inputs<span class="token punctuation">.</span>device<span class="token punctuation">)</span><span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span>expand<span class="token punctuation">(</span>batch_size<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token comment"># 嵌入</span>
+    token_embeddings <span class="token operator">=</span> self<span class="token punctuation">.</span>token_embedding<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+    position_embeddings <span class="token operator">=</span> self<span class="token punctuation">.</span>position_embedding<span class="token punctuation">(</span>position_ids<span class="token punctuation">)</span>  
+    embeddings <span class="token operator">=</span> token_embeddings <span class="token operator">+</span> position_embeddings  
+    <span class="token comment"># 从Transfromer块传过去</span>
+    x <span class="token operator">=</span> embeddings
+    <span class="token keyword keyword-for">for</span> block <span class="token keyword keyword-in">in</span> self<span class="token punctuation">.</span>blocks<span class="token punctuation">:</span>
+        x <span class="token operator">=</span> block<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> self<span class="token punctuation">.</span>layer_norm<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    logits <span class="token operator">=</span> self<span class="token punctuation">.</span>output_layer<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token comment"># 如果有标签，计算损失</span>
+    <span class="token keyword keyword-if">if</span> labels <span class="token keyword keyword-is">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        loss <span class="token operator">=</span> <span class="token boolean">None</span>
+    <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+        loss <span class="token operator">=</span> F<span class="token punctuation">.</span>cross_entropy<span class="token punctuation">(</span>logits<span class="token punctuation">.</span>view<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> logits<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> labels<span class="token punctuation">.</span>view<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> logits<span class="token punctuation">,</span> loss
+
+
+
+<span class="token keyword keyword-def">def</span> <span class="token function">generate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">,</span> max_new_tokens<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    encoded_input <span class="token operator">=</span> tokenizer<span class="token punctuation">.</span>encode<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+    encoded_input <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span>encoded_input<span class="token punctuation">)</span><span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> 
+    device <span class="token operator">=</span> <span class="token builtin">next</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>parameters<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>device  
+    encoded_input <span class="token operator">=</span> encoded_input<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span>
+
+    <span class="token keyword keyword-if">if</span> encoded_input<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> self<span class="token punctuation">.</span>seq_len<span class="token punctuation">:</span>
+        encoded_input <span class="token operator">=</span> encoded_input<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span>self<span class="token punctuation">.</span>seq_len<span class="token punctuation">]</span>
+
+    generated <span class="token operator">=</span> encoded_input
+    <span class="token keyword keyword-for">for</span> _ <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>max_new_tokens<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-if">if</span> generated<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> self<span class="token punctuation">.</span>seq_len<span class="token punctuation">:</span>
+            generated_input <span class="token operator">=</span> generated<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token operator">-</span>self<span class="token punctuation">.</span>seq_len<span class="token punctuation">:</span><span class="token punctuation">]</span>
+        <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+            generated_input <span class="token operator">=</span> generated
+
+        logits<span class="token punctuation">,</span> _ <span class="token operator">=</span> self<span class="token punctuation">.</span>forward<span class="token punctuation">(</span>generated_input<span class="token punctuation">)</span>
+        last_logits <span class="token operator">=</span> logits<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>
+        next_token_ids <span class="token operator">=</span> torch<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>last_logits<span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        next_token_ids <span class="token operator">=</span> next_token_ids<span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        generated <span class="token operator">=</span> torch<span class="token punctuation">.</span>cat<span class="token punctuation">(</span><span class="token punctuation">[</span>generated<span class="token punctuation">,</span> next_token_ids<span class="token punctuation">]</span><span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+    generated_ids <span class="token operator">=</span> generated<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    generated_text <span class="token operator">=</span> tokenizer<span class="token punctuation">.</span>decode<span class="token punctuation">(</span>generated_ids<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> generated_text
+</code></pre></li>
+<li>
+<p>训练与验证<br>
+我们定义了train函数和validate函数来训练和验证模型。在每个epoch内，计算损失并更新模型参数。实现代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">train</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> dataloader<span class="token punctuation">,</span> epoch<span class="token punctuation">,</span> device<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    optimizer <span class="token operator">=</span> torch<span class="token punctuation">.</span>optim<span class="token punctuation">.</span>Adam<span class="token punctuation">(</span>model<span class="token punctuation">.</span>parameters<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lr<span class="token operator">=</span><span class="token number">0.001</span><span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    total_loss <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword keyword-for">for</span> i<span class="token punctuation">,</span> <span class="token punctuation">(</span>inputs<span class="token punctuation">,</span> targets<span class="token punctuation">)</span> <span class="token keyword keyword-in">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">enumerate</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span><span class="token punctuation">,</span> total<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        inputs<span class="token punctuation">,</span> targets <span class="token operator">=</span> inputs<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span><span class="token punctuation">,</span> targets<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span>
+        optimizer<span class="token punctuation">.</span>zero_grad<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        logits<span class="token punctuation">,</span> loss <span class="token operator">=</span> model<span class="token punctuation">(</span>inputs<span class="token punctuation">,</span> targets<span class="token punctuation">)</span>
+        loss<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        optimizer<span class="token punctuation">.</span>step<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        total_loss <span class="token operator">+=</span> loss<span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Epoch </span><span class="token interpolation"><span class="token punctuation">{</span>epoch<span class="token punctuation">}</span></span><span class="token string"> Loss: </span><span class="token interpolation"><span class="token punctuation">{</span>total_loss <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> total_loss <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">validate</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> dataloader<span class="token punctuation">,</span> epoch<span class="token punctuation">,</span> device<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    model<span class="token punctuation">.</span><span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    total_loss <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword keyword-with">with</span> torch<span class="token punctuation">.</span>no_grad<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-for">for</span> i<span class="token punctuation">,</span> <span class="token punctuation">(</span>inputs<span class="token punctuation">,</span> targets<span class="token punctuation">)</span> <span class="token keyword keyword-in">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">enumerate</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span><span class="token punctuation">,</span> total<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            inputs<span class="token punctuation">,</span> targets <span class="token operator">=</span> inputs<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span><span class="token punctuation">,</span> targets<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span>
+            logits<span class="token punctuation">,</span> loss <span class="token operator">=</span> model<span class="token punctuation">(</span>inputs<span class="token punctuation">,</span> targets<span class="token punctuation">)</span>
+            total_loss <span class="token operator">+=</span> loss<span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Epoch </span><span class="token interpolation"><span class="token punctuation">{</span>epoch<span class="token punctuation">}</span></span><span class="token string"> Validation Loss: </span><span class="token interpolation"><span class="token punctuation">{</span>total_loss <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> total_loss <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span>
+</code></pre></li>
+<li>
+<p>模型训练与生成<br>
+最后，实现了一个run函数来组织模型的训练过程，并调用模型的generate方法生成文本。实现代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 训练模型</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">run</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> train_dataloader<span class="token punctuation">,</span> valid_dataloader<span class="token punctuation">,</span> device<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    train_losses <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    valid_losses <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-for">for</span> epoch <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>epochs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        train_loss <span class="token operator">=</span> train<span class="token punctuation">(</span>model<span class="token punctuation">,</span> train_dataloader<span class="token punctuation">,</span> epoch<span class="token punctuation">,</span> device<span class="token punctuation">)</span>
+        valid_loss <span class="token operator">=</span> validate<span class="token punctuation">(</span>model<span class="token punctuation">,</span> valid_dataloader<span class="token punctuation">,</span> epoch<span class="token punctuation">,</span> device<span class="token punctuation">)</span>
+        train_losses<span class="token punctuation">.</span>append<span class="token punctuation">(</span>train_loss<span class="token punctuation">)</span>
+        valid_losses<span class="token punctuation">.</span>append<span class="token punctuation">(</span>valid_loss<span class="token punctuation">)</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Epoch </span><span class="token interpolation"><span class="token punctuation">{</span>epoch<span class="token punctuation">}</span></span><span class="token string"> Train Loss: </span><span class="token interpolation"><span class="token punctuation">{</span>train_loss<span class="token punctuation">}</span></span><span class="token string">, Valid Loss: </span><span class="token interpolation"><span class="token punctuation">{</span>valid_loss<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 绘图输出损失</span>
+    plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span>epochs<span class="token punctuation">)</span><span class="token punctuation">,</span> train_losses<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Train Loss'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span>epochs<span class="token punctuation">)</span><span class="token punctuation">,</span> valid_losses<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Validation Loss'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Epoch'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Loss'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Training and Validation Loss Over Epochs'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>实验结果：</p>
+<ul>
+<li>我们采用 epochs = 5,10,20 分别使用 Colab 的 GPU 训练模型，并以下面五个句子作为开头测试文本生成：</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 测试生成文本，最多300词，选择五个句子进行测试</span>
+generated_text <span class="token operator">=</span> model<span class="token punctuation">.</span>generate<span class="token punctuation">(</span><span class="token string">"I have a dog."</span><span class="token punctuation">,</span> tokenizer<span class="token operator">=</span>tokenizer<span class="token punctuation">,</span>max_new_tokens<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generated_text<span class="token punctuation">)</span>
+
+generated_text <span class="token operator">=</span> model<span class="token punctuation">.</span>generate<span class="token punctuation">(</span><span class="token string">"You are so fool!"</span><span class="token punctuation">,</span> tokenizer<span class="token operator">=</span>tokenizer<span class="token punctuation">,</span>max_new_tokens<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generated_text<span class="token punctuation">)</span>
+
+generated_text <span class="token operator">=</span> model<span class="token punctuation">.</span>generate<span class="token punctuation">(</span><span class="token string">"Where is the God?"</span><span class="token punctuation">,</span> tokenizer<span class="token operator">=</span>tokenizer<span class="token punctuation">,</span>max_new_tokens<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generated_text<span class="token punctuation">)</span>
+
+generated_text <span class="token operator">=</span> model<span class="token punctuation">.</span>generate<span class="token punctuation">(</span><span class="token string">"How are you?"</span><span class="token punctuation">,</span> tokenizer<span class="token operator">=</span>tokenizer<span class="token punctuation">,</span>max_new_tokens<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generated_text<span class="token punctuation">)</span>
+
+generated_text <span class="token operator">=</span> model<span class="token punctuation">.</span>generate<span class="token punctuation">(</span><span class="token string">"Please tell me the truth"</span><span class="token punctuation">,</span> tokenizer<span class="token operator">=</span>tokenizer<span class="token punctuation">,</span>max_new_tokens<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generated_text<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>测试结果如下：
+<ul>
+<li>epochs = 5 ：
+<ul>
+<li>loss 曲线<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/5_loss.png" alt=""></li>
+<li>生成结果：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/5_test_1.jpg" alt=""><br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/5_test_2.jpg" alt=""></li>
+</ul>
+</li>
+<li>epochs = 10 ：
+<ul>
+<li>loss 曲线：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/10_loss.png" alt=""></li>
+<li>生成结果：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/10_test.jpg" alt=""></li>
+</ul>
+</li>
+<li>epochs = 20 ：
+<ul>
+<li>loss 曲线：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/20_loss.png" alt=""></li>
+<li>生成结果：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/20_test_1.jpg" alt=""><br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/20_test_2.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>由于训练时间限制，我们没有进行更多轮次的训练，但是从上面的训练结果对比可以看出，当训练轮次增多时，效果逐渐变好，还没有出现过拟合现象，这是因为训练轮次都偏少的原因。尽管如此，loss 也控制在 1.x 左右，且输出的文本很少出现不可识别的单词。总体来说，模型取得了较好的表现效果。（提交训练 20 epochs 的 model.pth）</li>
+</ul>
+</li>
+</ul>
+<h3 id="bonus">Bonus </h3>
+<ul>
+<li>
+<p>实验思想：本实验利用生成式预训练模型和梯度攻击生成器，通过迭代优化输入前缀，使得模型生成的文本中包含特定的目标字符串。我们使用了 TinyStories-33M 模型来生成文本。梯度攻击生成器的核心思想是计算目标字符串与当前生成文本的差异，然后利用梯度信息调整输入前缀，逐步接近目标。<br>
+<br></p>
+</li>
+<li>
+<p>实验过程：</p>
+<ul>
+<li>
+<p>初始化<br>
+首先导入所需的库和模型，然后设置随机种子和设备（GPU），以确保结果的可重现性和利用GPU加速计算。</p>
+</li>
+<li>
+<p>模型和tokenizer<br>
+使用 AutoModelForCausalLM 和 AutoTokenizer 初始化预训练的 TinyStories-33M 模型和 GPT-Neo-125M 的tokenizer。<br>
+将模型移动到GPU上进行计算，并设置为评估模式。</p>
+</li>
+<li>
+<p>梯度攻击生成器<br>
+token_gradients 函数: 计算指定输入前缀和目标字符串之间的梯度。这里使用了CrossEntropyLoss作为损失函数，根据输入前缀和模型生成的logits计算梯度；<br>
+sample_control 函数: 根据梯度信息采样新的控制标记（token），用于更新输入前缀，增加探索性；get_filtered_cands 函数: 过滤并获取符合条件的候选生成文本，用于评估生成结果的质量和更新输入前缀。</p>
+</li>
+<li>
+<p>模型操作<br>
+get_logits 函数: 根据给定的输入前缀和控制标记，生成模型输出的logits。支持返回logits和token IDs用于损失计算；forward 函数: 执行模型的前向传播，生成输出logits。</p>
+</li>
+<li>
+<p>损失函数<br>
+target_loss 函数: 计算模型输出logits与目标字符串之间的损失。采用交叉熵损失函数（CrossEntropyLoss）来评估模型输出与目标之间的差异。</p>
+</li>
+<li>
+<p>迭代优化过程<br>
+主循环: 通过多次迭代优化输入前缀，使得生成的文本中包含特定的目标字符串；每次迭代中，计算当前输入前缀的梯度，更新输入前缀，计算生成文本与目标的损失，并根据损失选择最佳的新输入前缀；使用动态绘图工具 livelossplot 实时监测损失变化；当生成的文本中包含目标字符串时，终止优化过程。</p>
+</li>
+<li>
+<p>成功检测<br>
+is_success 函数: 判断生成的文本是否包含目标字符串，如果包含则返回True。<br>
+<br></p>
+</li>
+</ul>
+</li>
+<li>
+<p>实验结果：</p>
+<ul>
+<li>
+<p>以 'What can I say?Manba out!' 为 target ，结果如下：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>What can I say?
+Togtonrey was a very busy mail carrier!
+
+What can I say?
+Togtonrey was a very busy mail carrier!
+
+SUCCESS:  pilot!!!!!!!! carried ear builder showing!!!!!!!! 
+Waiturned VolcanoMail!!!!!!!!sfolk give injured!!!!!!!!!!!!
+!!!!!!!!!!!!cake!!!!!!!! Bin!!!!!!!!ick Helen
+</code></pre><p>loss 如下：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/bonus_1.png" alt=""></p>
+</li>
+<li>
+<p>以 'See you again.' 为target ，结果如下：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>The attention mask and the pad token id were not set. As a consequence, 
+ you may observe unexpected behavior. Please pass your input's `attention_mask` 
+ to obtain reliable results.
+ Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ See you again.”
+
+ Stososie had a great day at the park and couldn’t wait to go again.
+
+ See you again.”
+
+ Stososie had a great day at the park and couldn’t wait to go again.
+
+ SUCCESS: Levannie!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! parents!!!!!!!
+ !ugs Band!!!!!!!! cu!!!!!!!! discovering stationsrd
+</code></pre><p>loss 如下：<br>
+<img src="c:/Users/86153/Desktop/AI/Lab/lab2/bonus_2.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
